@@ -78,6 +78,10 @@ button {
   display: block;
   width: 100%;
   color: #fff;
+  transition: all 0.3s;
+}
+#header .center .gnb li.on a {
+  color: #026793;
 }
 #header .barWrap {
   position: absolute;
@@ -181,10 +185,11 @@ button {
   bottom: 20px;
 }
 #container .cont2 {
-  padding: 200px 0 100px;
+  padding: 300px 0;
   background-color: #141416;
   display: flex;
   justify-content: center;
+  color: #fff;
 }
 #container .cont2 .center {
   width: 83%;
@@ -203,30 +208,49 @@ button {
 }
 #container .cont2 .center .contextWrap {
   display: flex;
-  justify-content: space-between;
 }
 #container .cont2 .center .contextWrap .leftWrap {
-  width: 28%;
+  width: 40%;
   font-family: "SUITE-Regular";
+  margin-right: 50px;
 }
-#container .cont2 .center .contextWrap .leftWrap .text {
-  color: #fff;
+#container .cont2 .center .contextWrap .leftWrap h4 {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+#container .cont2 .center .contextWrap .leftWrap h4 span {
+  color: #026793;
+}
+#container .cont2 .center .contextWrap .leftWrap p {
+  font-size: 18px;
+  line-height: 28px;
 }
 #container .cont2 .center .contextWrap .rightWrap {
-  width: 70%;
+  width: 40%;
+}
+#container .cont2 .center .contextWrap .rightWrap h4 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: "SUITE-Regular";
+}
+#container .cont2 .center .contextWrap .rightWrap .iconWrap {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
-#container .cont2 .center .contextWrap .rightWrap .view {
-  width: 14%;
-  height: 500px;
-  background-color: #026793;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.5s;
+#container .cont2 .center .contextWrap .rightWrap .iconWrap > div {
+  width: 33.333333%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
-#container .cont2 .center .contextWrap .rightWrap .view.on {
-  width: 68%;
+#container .cont2 .center .contextWrap .rightWrap .iconWrap > div img {
+  width: 40px;
+  padding-right: 15px;
+}
+#container .cont2 .center .contextWrap .rightWrap .iconWrap > div p {
+  font-size: 18px;
 }
 #container .cont3 .portfolio01, #container .cont3 .portfolio02, #container .cont3 .portfolio03 {
   display: flex;
@@ -308,15 +332,23 @@ button {
 }
 #container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 {
   display: flex;
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03 > div, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03 > div, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 > div {
+  display: flex;
   align-items: center;
+  width: 50%;
 }
-#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03 h4, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03 h4, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 h4 {
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03 > div h4, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03 > div h4, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 > div h4 {
   font-size: 18px;
-  padding-right: 10px;
+  padding-right: 15px;
 }
-#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03 p, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03 p, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 p {
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03 > div p, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03 > div p, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 > div p {
   margin: 10px 0;
   font-size: 16px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03 > div i, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03 > div i, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 > div i {
+  font-size: 25px;
+  padding-right: 7px;
 }
 #container .cont3 .portfolio01 .center .leftWrap .textWrap, #container .cont3 .portfolio02 .center .leftWrap .textWrap, #container .cont3 .portfolio03 .center .leftWrap .textWrap {
   position: relative;
@@ -456,4 +488,5 @@ button {
 #container .cont4 .center .contextWrap {
   color: #fff;
   height: 600px;
+  font-family: "SUITE-Regular";
 }
