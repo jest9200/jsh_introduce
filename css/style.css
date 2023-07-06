@@ -1,0 +1,436 @@
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2") format("woff2");
+  font-weight: 300, 400, 500, 600, 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+input,
+button {
+  outline: none;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.5s;
+}
+#header .center {
+  width: 83%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .center .logo a {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 35px;
+  color: #fff;
+}
+#header .center .logo a span {
+  font-family: "Roboto Slab", serif;
+}
+#header .center .gnb {
+  display: flex;
+}
+#header .center .gnb li {
+  padding-left: 60px;
+}
+#header .center .gnb li a {
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+#header .barWrap {
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  bottom: -7px;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.5s;
+}
+#header .barWrap .bar {
+  position: absolute;
+  height: 7px;
+  bottom: 0;
+  left: 0;
+  background-color: #026793;
+}
+
+#header.on {
+  background-color: #141416;
+}
+#header.on .barWrap {
+  opacity: 1;
+}
+
+#container .cont1 {
+  background-image: url(/img/cont1Bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+}
+#container .cont1 .titleWrap {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+#container .cont1 .titleWrap h1 {
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#container .cont1 .titleWrap h1 span {
+  font-family: "IBM Plex Sans", sans-serif;
+  display: block;
+  font-size: 60px;
+  font-weight: 500;
+}
+#container .cont1 .titleWrap h2 {
+  font-size: 35px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 14px;
+  margin-bottom: 50px;
+}
+#container .cont1 .titleWrap .linkWrap {
+  display: flex;
+}
+#container .cont1 .titleWrap .linkWrap > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+  margin-right: 30px;
+  transition: all 0.5s;
+}
+#container .cont1 .titleWrap .linkWrap > a:hover {
+  background-color: #fff;
+  color: #026793;
+}
+#container .cont1 .mouseWrap {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+#container .cont1 .mouseWrap img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#container .cont1 .mouseWrap p i {
+  margin-top: 5px;
+  font-size: 30px;
+  color: #fff;
+}
+#container .cont1 .mouseWrap.on {
+  bottom: 20px;
+}
+#container .cont2 {
+  padding: 200px 0 100px;
+  background-color: #141416;
+  display: flex;
+  justify-content: center;
+}
+#container .cont2 .center {
+  width: 83%;
+}
+#container .cont2 .center .titleWrap {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+#container .cont2 .center .titleWrap::after {
+  content: "";
+  display: block;
+  width: 156px;
+  height: 5px;
+  background-color: #026793;
+}
+#container .cont2 .center .contextWrap {
+  display: flex;
+  justify-content: space-between;
+}
+#container .cont2 .center .contextWrap .leftWrap {
+  width: 28%;
+  font-family: "SUITE-Regular";
+}
+#container .cont2 .center .contextWrap .leftWrap .text {
+  color: #fff;
+}
+#container .cont2 .center .contextWrap .rightWrap {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+#container .cont2 .center .contextWrap .rightWrap .view {
+  width: 14%;
+  height: 500px;
+  background-color: #026793;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#container .cont2 .center .contextWrap .rightWrap .view.on {
+  width: 68%;
+}
+#container .cont3 .portfolio01, #container .cont3 .portfolio02, #container .cont3 .portfolio03 {
+  display: flex;
+  justify-content: center;
+  padding: 180px 0 150px;
+  color: #141416;
+}
+#container .cont3 .portfolio01 .center, #container .cont3 .portfolio02 .center, #container .cont3 .portfolio03 .center {
+  width: 83%;
+  display: flex;
+  justify-content: space-between;
+}
+#container .cont3 .portfolio01 .center .leftWrap, #container .cont3 .portfolio02 .center .leftWrap, #container .cont3 .portfolio03 .center .leftWrap {
+  width: 38%;
+}
+#container .cont3 .portfolio01 .center .leftWrap .titleWrap, #container .cont3 .portfolio02 .center .leftWrap .titleWrap, #container .cont3 .portfolio03 .center .leftWrap .titleWrap {
+  padding-top: 55px;
+  margin-bottom: 50px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .titleWrap h2, #container .cont3 .portfolio02 .center .leftWrap .titleWrap h2, #container .cont3 .portfolio03 .center .leftWrap .titleWrap h2 {
+  font-size: 50px;
+  padding-bottom: 12px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .titleWrap h2::after, #container .cont3 .portfolio02 .center .leftWrap .titleWrap h2::after, #container .cont3 .portfolio03 .center .leftWrap .titleWrap h2::after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 5px;
+  background-color: #026793;
+}
+#container .cont3 .portfolio01 .center .leftWrap .titleWrap p, #container .cont3 .portfolio02 .center .leftWrap .titleWrap p, #container .cont3 .portfolio03 .center .leftWrap .titleWrap p {
+  font-size: 20px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .titleWrap p a, #container .cont3 .portfolio02 .center .leftWrap .titleWrap p a, #container .cont3 .portfolio03 .center .leftWrap .titleWrap p a {
+  font-family: "SUITE-Regular";
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #026793;
+  color: #fff;
+  border: 1px solid #026793;
+  transition: all 0.5s;
+}
+#container .cont3 .portfolio01 .center .leftWrap .titleWrap p a:hover, #container .cont3 .portfolio02 .center .leftWrap .titleWrap p a:hover, #container .cont3 .portfolio03 .center .leftWrap .titleWrap p a:hover {
+  background-color: #fff;
+  color: #026793;
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap, #container .cont3 .portfolio02 .center .leftWrap .explainWrap, #container .cont3 .portfolio03 .center .leftWrap .explainWrap {
+  margin-bottom: 30px;
+  font-family: "SUITE-Regular";
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line01,
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line02, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line01,
+#container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line02, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line01,
+#container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line02 {
+  margin-bottom: 25px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line01 h4,
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line02 h4, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line01 h4,
+#container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line02 h4, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line01 h4,
+#container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line02 h4 {
+  font-size: 18px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line01 p,
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line02 p, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line01 p,
+#container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line02 p, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line01 p,
+#container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line02 p {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line02 p span, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line02 p span, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line02 p span {
+  padding-right: 10px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 {
+  display: flex;
+  align-items: center;
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03 h4, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03 h4, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 h4 {
+  font-size: 18px;
+  padding-right: 10px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .explainWrap .explain .line03 p, #container .cont3 .portfolio02 .center .leftWrap .explainWrap .explain .line03 p, #container .cont3 .portfolio03 .center .leftWrap .explainWrap .explain .line03 p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .textWrap, #container .cont3 .portfolio02 .center .leftWrap .textWrap, #container .cont3 .portfolio03 .center .leftWrap .textWrap {
+  position: relative;
+  height: 400px;
+  font-family: "SUITE-Regular";
+}
+#container .cont3 .portfolio01 .center .leftWrap .textWrap .text, #container .cont3 .portfolio02 .center .leftWrap .textWrap .text, #container .cont3 .portfolio03 .center .leftWrap .textWrap .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.7s;
+}
+#container .cont3 .portfolio01 .center .leftWrap .textWrap .text h4, #container .cont3 .portfolio02 .center .leftWrap .textWrap .text h4, #container .cont3 .portfolio03 .center .leftWrap .textWrap .text h4 {
+  font-size: 18px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .textWrap .text p, #container .cont3 .portfolio02 .center .leftWrap .textWrap .text p, #container .cont3 .portfolio03 .center .leftWrap .textWrap .text p {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+#container .cont3 .portfolio01 .center .leftWrap .textWrap .text.on, #container .cont3 .portfolio02 .center .leftWrap .textWrap .text.on, #container .cont3 .portfolio03 .center .leftWrap .textWrap .text.on {
+  opacity: 1;
+}
+#container .cont3 .portfolio01 .center .rightWrap, #container .cont3 .portfolio02 .center .rightWrap, #container .cont3 .portfolio03 .center .rightWrap {
+  width: 58%;
+}
+#container .cont3 .portfolio01 .center .rightWrap .tabWrap ul, #container .cont3 .portfolio02 .center .rightWrap .tabWrap ul, #container .cont3 .portfolio03 .center .rightWrap .tabWrap ul {
+  display: flex;
+  justify-content: flex-end;
+}
+#container .cont3 .portfolio01 .center .rightWrap .tabWrap ul li, #container .cont3 .portfolio02 .center .rightWrap .tabWrap ul li, #container .cont3 .portfolio03 .center .rightWrap .tabWrap ul li {
+  margin-left: 2px;
+  overflow: hidden;
+}
+#container .cont3 .portfolio01 .center .rightWrap .tabWrap ul li span, #container .cont3 .portfolio02 .center .rightWrap .tabWrap ul li span, #container .cont3 .portfolio03 .center .rightWrap .tabWrap ul li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+  color: #141416;
+  transition: all 0.7s;
+  background-color: #eee;
+  font-family: "SUITE-Regular";
+  white-space: nowrap;
+}
+#container .cont3 .portfolio01 .center .rightWrap .tabWrap ul li.on span, #container .cont3 .portfolio02 .center .rightWrap .tabWrap ul li.on span, #container .cont3 .portfolio03 .center .rightWrap .tabWrap ul li.on span {
+  background-color: #026793;
+  color: #fff;
+}
+#container .cont3 .portfolio01 .center .rightWrap .viewWrap, #container .cont3 .portfolio02 .center .rightWrap .viewWrap, #container .cont3 .portfolio03 .center .rightWrap .viewWrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+#container .cont3 .portfolio01 .center .rightWrap .viewWrap .view, #container .cont3 .portfolio02 .center .rightWrap .viewWrap .view, #container .cont3 .portfolio03 .center .rightWrap .viewWrap .view {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s;
+  opacity: 0;
+}
+#container .cont3 .portfolio01 .center .rightWrap .viewWrap .view img, #container .cont3 .portfolio02 .center .rightWrap .viewWrap .view img, #container .cont3 .portfolio03 .center .rightWrap .viewWrap .view img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#container .cont3 .portfolio01 .center .rightWrap .viewWrap .view.on, #container .cont3 .portfolio02 .center .rightWrap .viewWrap .view.on, #container .cont3 .portfolio03 .center .rightWrap .viewWrap .view.on {
+  opacity: 1;
+}
+#container .cont3 .portfolio01 .center .rightWrap .viewWrap .view.on .btns, #container .cont3 .portfolio02 .center .rightWrap .viewWrap .view.on .btns, #container .cont3 .portfolio03 .center .rightWrap .viewWrap .view.on .btns {
+  display: flex;
+}
+#container .cont3 .portfolio02 {
+  color: #fff;
+  background-color: #141416;
+}
+#container .cont3 .portfolio02 .center .rightWrap .viewWrap {
+  border: 1px solid #222;
+}
+#container .cont3 .portfolio02 .center .leftWrap .titleWrap h2::after, #container .cont3 .portfolio03 .center .leftWrap .titleWrap h2::after {
+  width: 288px;
+}
+#container .cont4 {
+  padding: 200px 0 100px;
+  background-color: #141416;
+  display: flex;
+  justify-content: center;
+}
+#container .cont4 .center {
+  width: 83%;
+}
+#container .cont4 .center .titleWrap {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+#container .cont4 .center .titleWrap::after {
+  content: "";
+  display: block;
+  width: 207px;
+  height: 5px;
+  background-color: #026793;
+}
+#container .cont4 .center .contextWrap {
+  color: #fff;
+  height: 600px;
+}
