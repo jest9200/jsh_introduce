@@ -66,7 +66,7 @@
 
 #container {
     .cont1 {
-        background-image: url(img/cont1Bg.jpg);
+        background-image: url(../img/cont1Bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -360,6 +360,29 @@
                             opacity: 1;
                             .btns {
                                 display: flex;
+                            }
+                        }
+                        .btn {
+                            display: flex;
+                            position: absolute;
+                            top: 2px;
+                            right: 0;
+                            .prev,.next {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 70px;
+                                height: 70px;
+                                background-color: #026793;
+                                color: #fff;
+                                transition: all .5s;
+                                &:hover {
+                                    color: #026793;
+                                    background-color: #eee;
+                                }
+                                i {
+                                    font-size: 20px;
+                                }
                             }
                         }
                     }
