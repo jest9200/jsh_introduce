@@ -6,6 +6,7 @@ const cont1 = document.querySelector(".cont1");
 const cont2 = document.querySelector(".cont2");
 const cont3 = document.querySelector(".cont3");
 const cont4 = document.querySelector(".cont4");
+const backToTop = document.querySelector(".backToTop");
 
 const contDivs = document.querySelectorAll("#container > div");
 console.log(contDivs);
@@ -21,6 +22,26 @@ for(let i=0; i<gnbMenus.length; i++){
         })
     })
 }
+
+// cont1 링크들 누르면 각 구간으로 스크롤이동
+const aboutLink = document.querySelector(".cont1 .about");
+const contactLink = document.querySelector(".cont1 .contact");
+
+aboutLink.addEventListener("click",(e)=>{
+    e.preventDefault();
+    window.scrollTo({
+        top:cont2.offsetTop,
+        behavior:"smooth"
+    })
+})
+
+contactLink.addEventListener("click",(e)=>{
+    e.preventDefault();
+    window.scrollTo({
+        top:cont4.offsetTop,
+        behavior:"smooth"
+    })
+})
 
 
 window.addEventListener("scroll", () => {
@@ -60,6 +81,12 @@ window.addEventListener("scroll", () => {
         }
         gnbMenus[3].classList.add("on");
     }
+
+    if(scTop >= cont4.offsetTop){
+        backToTop.classList.add("on");
+    } else {
+        backToTop.classList.remove("on");
+    }
 });
 
 // 마우스아이콘 위아래 반복 이동 기능
@@ -76,5 +103,14 @@ headerLogo.addEventListener("click",(e)=>{
     window.scrollTo({
         top:0,
         behavior:"smooth"
-    })
+    });
+})
+
+// backToTop 클릭시 맨 위로
+backToTop.addEventListener("click",(e)=>{
+    e.preventDefault();
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 })
