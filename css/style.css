@@ -204,6 +204,7 @@ button {
   display: block;
   width: 156px;
   height: 5px;
+  margin-top: 5px;
   background-color: #026793;
 }
 #container .cont2 .center .contextWrap {
@@ -314,6 +315,7 @@ button {
   width: 280px;
   height: 5px;
   background-color: #026793;
+  margin-top: 5px;
 }
 #container .cont3 .portfolio01 .center .leftWrap .titleWrap p,
 #container .cont3 .portfolio02 .center .leftWrap .titleWrap p,
@@ -592,6 +594,7 @@ button {
   width: 207px;
   height: 5px;
   background-color: #026793;
+  margin-top: 5px;
 }
 #container .cont4 .center .contextWrap {
   color: #fff;
